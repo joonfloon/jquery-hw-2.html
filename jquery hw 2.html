@@ -17,12 +17,18 @@
 
       <div id="question-2" class="form-group">
         <label class="control-label">How many wives has Trump had?</label>
-        <select class="form-control">
+        <select id='numba' class="form-control">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
         </select>
+
+        <div id="question-3" class="form-group">
+          <label class="control-label">Who is the president of Russia?</label>
+          <input id='name2' type="text" class="form-control" />
+        </div>
+
       </div>
 
       <div class="form-group">
@@ -40,14 +46,20 @@
       $('#question-1').addClass('has-error');
     };
 
-    var numWives = $('#number').val();
+    var numWives = $('#numba').val();
 
         if (numWives == 3) {
           $('#question-2').addClass('has-success');
         } else {
           $('#question-2').addClass('has-error');
-        }
+        };
 
+        var russName = $('#name2').val();
+            if (russName == 'Putin') {
+            $('#question-3').addClass('has-success');
+          } else {
+            $('#question-3').addClass('has-error');
+          };
 
   });
     </script>
