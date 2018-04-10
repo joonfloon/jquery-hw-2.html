@@ -24,11 +24,11 @@
           <option value="4">4</option>
         </select>
 
-        <div id="question-3" class="form-group">
-          <label class="control-label">Who is the president of Russia?</label>
-          <input id='name2' type="text" class="form-control" />
-        </div>
+      </div>
 
+      <div id="question-3" class="form-group">
+        <label class="control-label">Who is the president of Russia?</label>
+        <input id='name2' type="text" class="form-control" />
       </div>
 
       <div class="form-group">
@@ -39,6 +39,8 @@
     <script>
     $('#grade-it').on('click', function() {
 
+  $('div').removeClass('has-success has-error');
+
   var presName = $('#name').val();
       if (presName == 'Trump') {
       $('#question-1').addClass('has-success');
@@ -46,13 +48,14 @@
       $('#question-1').addClass('has-error');
     };
 
-    var numWives = $('#numba').val();
 
+    var numWives = $('#numba').val();
         if (numWives == 3) {
           $('#question-2').addClass('has-success');
         } else {
           $('#question-2').addClass('has-error');
         };
+
 
         var russName = $('#name2').val();
             if (russName == 'Putin') {
